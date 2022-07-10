@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+
+
+
+    <title></title>
+
+
+
+    <style type="text/css">
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', ;
+        }
+        
+        #header {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/hero-bg.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+        }
+        
+        .navbar {
+            background: #000;
+            width: 100%;
+            height: 12vh;
+            position: fixed;
+            z-index: 111111;
+        }
+        
+        .navbar-nav {
+            margin-left: 455px;
+        }
+        
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+            font-size: 32px;
+            text-transform: uppercase;
+        }
+        
+        .nav-item {
+            font-size: 15px;
+            padding: 5px;
+            color: #fff;
+        }
+        
+        .navbar a,
+        .navbar a:focus {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+        }
+        
+        .navbar a:hover:before,
+        .navbar li:hover a:before,
+        .navbar .active::before {
+            visibility: visible;
+            width: 100%;
+        }
+        
+        .navbar ul li a:before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            bottom: 3px;
+            left: 0;
+            width: 0;
+            visibility: hidden;
+            background-color: #1bac91;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .text {
+            padding-top: 270px;
+        }
+        
+        .title {
+            font-size: 50px;
+            color: #fff;
+            padding: 5px;
+            font-family: tacon;
+            font-weight: bold;
+        }
+        
+        .description {
+            font-size: 25px;
+            color: #fff;
+            padding: 5px;
+            font-family: tacon;
+        }
+        
+        .btn {
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 20px;
+            padding: 8px 28px;
+        }
+        
+        .btn:hover {
+            background: #48C9B0;
+            transition: 0.2s;
+            color: #fff;
+        }
+        
+        .img-fluid {
+            height: 92vh;
+            margin-top: 100px;
+        }
+        
+        .about-box {
+            padding-top: 110px;
+        }
+        
+        .about-us .p1 {
+            font-size: 34px;
+            color: #21413c;
+            font-family: sans-serif;
+            padding: 8px;
+        }
+        
+        .about-us p {
+            font: size 16px;
+            font-family: sans-serif;
+            margin: 0px 0px 16px;
+            color: #444444;
+            padding: 0 0 0 8px;
+        }
+        
+        .icon-box {
+            margin-top: 44px;
+        }
+        
+        .icon-box img {
+            font-size: 48px;
+            float: left;
+            color: #1bac91;
+        }
+        
+        .icon-box h4 {
+            font-size: 22px;
+            font-weight: 500;
+            margin-left: 70px;
+            color: #21413c;
+        }
+        
+        .icon-box p {
+            font-size: 15px;
+            color: #848484;
+            margin-left: 70px;
+        }
+        
+        #steps {
+            padding: 50px 0 40px 0;
+            overflow: hidden;
+            background: #f2f9f8;
+            margin-top: 60px;
+        }
+        
+        .content-item {
+            padding: 40px;
+            border-right: 1px solid #d4e9e6;
+            border-bottom: 1px solid #d4e9e6;
+            margin: -1px;
+        }
+        
+        .content-item span {
+            display: block;
+            font-size: 24px;
+            font-weight: 400;
+            color: #1bac91;
+        }
+        
+        .content-item h4 {
+            font-size: 28px;
+            font-weight: 400;
+            padding: 0;
+            margin: 20px 0;
+            color: #21413c;
+        }
+        
+        .content-item p {
+            color: #aaaaaa;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .steps .content-item {
+                padding: 40px 0;
+            }
+        }
+        
+        .e-div {
+            margin-top: 60px;
+        }
+        
+        .img-fluid1 {
+            margin-right: 300px;
+        }
+        
+        .e-div1 {
+            margin-top: 20px;
+        }
+        
+        .e-div1 h4 {
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        
+        .e-div1 p {
+            margin-top: px;
+            font-size: 15px;
+        }
+        
+        #services {
+            margin-top: 60px;
+            height: 100vh;
+        }
+        
+        .section-title h2 {
+            text-align: center;
+            padding-top: 65px;
+        }
+        
+        .section-title p {
+            text-align: center;
+            padding-top: 20px;
+        }
+        
+        .s-div {
+            margin-top: 60px;
+        }
+        
+        .a {
+            background: #fff;
+            padding: 50px!important;
+            position: relative;
+            border-radius: 10%;
+        }
+        
+        .b {
+            background: #fff;
+            padding: 50px!important;
+            position: relative;
+            border-radius: 10%;
+        }
+        
+        .c {
+            background: #fff;
+            padding: 50px!important;
+            position: relative;
+            border-radius: 10%;
+        }
+        
+        .d {
+            background: #fff;
+            padding: 50px!important;
+            position: relative;
+            border-radius: 10%;
+        }
+        
+        .img1 {
+            width: 356px;
+            height: 267px;
+        }
+        
+        #Portfolio {
+            background: #f2f9f8;
+            height: 200vh;
+            padding-top: 50px;
+        }
+        
+        .pt {
+            font-family: "Raleway", sans-serif;
+            color: #21413c;
+            font-size: 36px;
+            font-weight: 300;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .pb {
+            font-family: "Open Sans", sans-serif;
+            color: #444444;
+        }
+        
+        .img {
+            background-image: url("img/portfolio-1.jpg");
+            height: 268px;
+            background-size: cover!important;
+        }
+        
+        .img2 {
+            background-image: url("img/portfolio-2.jpg");
+            height: 268px;
+            background-size: cover!important;
+        }
+        
+        .img3 {
+            background-image: url("img/portfolio-3.jpg");
+            height: 268px;
+            background-size: cover!important;
+        }
+        
+        .img4 {
+            background-image: url("img/portfolio-4.jpg");
+            height: 268px;
+            background-size: cover!important;
+        }
+        
+        .img5 {
+            background-image: url("img/portfolio-5.jpg");
+            height: 268px;
+            background-size: cover!important;
+        }
+        
+        .img6 {
+            background-image: url("img/portfolio-6.jpg");
+            height: 268px;
+            background-size: cover!important;
+        }
+        
+        .img7 {
+            background-image: url("img/portfolio-7.jpg");
+            height: 268px;
+            background-size: cover!important;
+        }
+        
+        .img8 {
+            background-image: url("img/portfolio-8.jpg");
+            height: 268px;
+            background-size: cover!important;
+        }
+        
+        .img9 {
+            background-image: url("img/portfolio-9.jpg");
+            height: 268px;
+            background-size: cover!important;
+        }
+        
+        .img::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img::after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img2::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img2::after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img3::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img3::after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img4::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img4::after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img5::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img5::after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img6::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img6::after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img7::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img7::after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img8::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img8::after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img9::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        .img9::after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
+            transition: all 0.5s ease 0s;
+            z-index: 9994;
+        }
+        
+        img:hover {
+            color: #000;
+        }
+        
+        .pt1 {
+            font-family: "Raleway", sans-serif;
+            color: #21413c;
+            font-size: 36px;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        .pb1 {
+            font-family: "Open Sans", sans-serif;
+            color: #444444;
+            text-align: center;
+        }
+        
+        .img11 {
+            background-image: url("img/team-1.jpg");
+            height: 252px;
+            background-size: cover!important;
+        }
+        
+        .img12 {
+            background-image: url("img/team-2.jpg");
+            height: 252px;
+            background-size: cover!important;
+        }
+        
+        .img13 {
+            background-image: url("img/team-3.jpg");
+            height: 252px;
+            background-size: cover!important;
+        }
+        
+        .img14 {
+            background-image: url("img/team-4.jpg");
+            height: 252px;
+            background-size: cover!important;
+        }
+        
+        .contact .info {
+            padding: 30px;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact .info i {
+            font-size: 20px;
+            color: #1bac91;
+            float: left;
+            width: 44px;
+            height: 44px;
+            background: #e1f0ee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .contact .info h4 {
+            padding: 0 0 0 60px;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #21413c;
+        }
+        
+        .contact .info p {
+            padding: 0 0 0 60px;
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #43857a;
+        }
+        
+        .contact .info .email p {
+            padding-top: 5px;
+        }
+        
+        .contact .info .social-links {
+            padding-left: 60px;
+        }
+        
+        .contact .info .social-links a {
+            font-size: 18px;
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            line-height: 1;
+            padding: 8px 0;
+            border-radius: 50%;
+            text-align: center;
+            width: 36px;
+            height: 36px;
+            transition: 0.3s;
+            margin-right: 10px;
+        }
+        
+        .contact .info .social-links a:hover {
+            background: #1bac91;
+            color: #fff;
+        }
+        
+        .contact .info .email:hover i,
+        .contact .info .address:hover i,
+        .contact .info .phone:hover i {
+            background: #1bac91;
+            color: #fff;
+        }
+        
+        .contact .php-email-form {
+            width: 100%;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+        }
+        
+        .contact .php-email-form .form-group {
+            padding-bottom: 8px;
+        }
+        
+        .contact .php-email-form .error-message {
+            display: none;
+            color: #fff;
+            background: #ed3c0d;
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+        }
+        
+        .contact .php-email-form .error-message br+br {
+            margin-top: 25px;
+        }
+        
+        .contact .php-email-form .sent-message {
+            display: none;
+            color: #fff;
+            background: #18d26e;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+        }
+        
+        .contact .php-email-form .loading {
+            display: none;
+            background: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .contact .php-email-form .loading:before {
+            content: "";
+            display: inline-block;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            margin: 0 10px -6px 0;
+            border: 3px solid #18d26e;
+            border-top-color: #eee;
+            -webkit-animation: animate-loading 1s linear infinite;
+            animation: animate-loading 1s linear infinite;
+        }
+        
+        .contact .php-email-form input,
+        .contact .php-email-form textarea {
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 14px;
+        }
+        
+        .contact .php-email-form input {
+            height: 44px;
+        }
+        
+        .contact .php-email-form textarea {
+            padding: 10px 12px;
+        }
+        
+        .contact .php-email-form button[type=submit] {
+            background: #1bac91;
+            border: 0;
+            padding: 10px 24px;
+            color: #fff;
+            transition: 0.4s;
+            border-radius: 4px;
+        }
+        
+        .contact .php-email-form button[type=submit]:hover {
+            background: #22d8b6;
+        }
+        
+        @-webkit-keyframes animate-loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes animate-loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        #footer {
+            background: #0c1817;
+            margin-top: 70px;
+        }
+        
+        #footer h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-top: 50px;
+        }
+        
+        #footer .text1 {
+            color: #fff;
+            margin-top: 22px
+        }
+        
+        #footer p {
+            color: #fff;
+            margin-top: -13px;
+            font-size: 14px;
+        }
+        
+        #footer h5 {
+            color: #fff;
+            font-size: 14px;
+            margin-top: 10px
+        }
+        
+        #footer h4 {
+            color: #fff;
+            margin-top: 50px;
+            padding-bottom: 10px;
+        }
+        
+        ul {
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        li a {
+            color: #fff;
+        }
+        
+        li i {
+            color: #1bac91;
+            padding: 10px;
+            font-size: 10px;
+        }
+        
+        ul li a:hover {
+            color: #22d8b6;
+        }
+        
+        .news-input {
+            border-radius: 100px 0px 0px 100px!important;
+            min-width: 150px;
+            min-height: 45px;
+        }
+        
+        .input-group-text {
+            color: #fff!important;
+            background: #1bac91;
+            border-radius: 0 100px 100px 0!important;
+            min-width: 130px;
+            min-height: 40px;
+        }
+        
+        .footersection p {
+            color: #fff;
+            padding-top: 20px;
+        }
+        
+        .footer2 {
+            background: #000;
+        }
+        
+        .footer2 {
+            color: #fff;
+            padding-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header">
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">maxim</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Team">Team</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Drop down
+                </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="w-section" data-aos="fade-up">
+
+            <div class="container">
+
+                <div class="text text-center ">
+
+                    <h1 class="title">Welcome to Maxim</h1>
+                    <p class="description">We are team of talented designers making websites with Bootstrap</p>
+                    <button class="btn " id="">GET STARTED</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6 text-center" data-aos="fade-right">
+
+                    <img src="img/about-img.jpg" class="img-fluid">
+
+                </div>
+                <div class="col-md-6">
+
+                    <div class="about-box">
+
+                        <div class="about-us">
+                            <p class="p1" data-aos="fade-up">Voluptatem dignissimos provident</p>
+                            <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+
+                        <div class="icon-box" data-aos="fade-up">
+                            <img src="img/1.png">
+                            <h4>Corporis voluptates sit</h4>
+                            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                        </div>
+
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <img src="img/2.png">
+                            <h4>Ullamco laboris nisi</h4>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                        </div>
+
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                            <img src="img/2.png">
+                            <h4>Ullamco laboris nisi</h4>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
+
+    <section id="steps">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 content-item" data-aos="fade-in" ">
+
+                    <span>01</span>
+                    <h4>Lorem Ipsum</h4>
+                    <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4 content-item " data-aos="fade-in " ">
+
+                    <span>02</span>
+                    <h4>Repellat Nihil</h4>
+                    <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4  content-item" data-aos="fade-in" ">
+
+                    <span>03</span>
+                    <h4>Ad ad velit qui</h4>
+                    <p> Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4 content-item " data-aos="fade-in " ">
+
+                    <span>04</span>
+                    <h4>Sapiente Magnam</h4>
+                    <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4  content-item" data-aos="fade-in" ">
+
+                    <span>05</span>
+                    <h4>Repellendus molestiae</h4>
+                    <p>Inventore quo sint a sint rerum. Distinctio blanditiis deserunt quod soluta quod nam mider lando casa</p>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4 content-item " data-aos="fade-in " ">
+
+                    <span>06</span>
+                    <h4>Facilis Impedit</h4>
+                    <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="e-div" id="">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="e-div1">
+
+                        <h4>Modi sit est</h4>
+                        <p> Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
+
+                    </div>
+                    <div class="e-div1">
+
+                        <h4>Unde praesentium sed</h4>
+                        <p>Voluptas vel esse repudiandae quo excepturi.</p>
+
+                    </div>
+
+
+                    <div class="e-div1">
+
+                        <h4>Pariatur explicabo vel</h4>
+                        <p> Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
+
+                    </div>
+                    <div class="e-div1">
+
+                        <h4>Nostrum qui quasi</h4>
+                        <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <img src="img/features-1.png" class="img-fluid1">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="services">
+
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>Services</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
+                    quidem hic quas.</p>
+            </div>
+
+            <div class="row s-div">
+
+                <div class="col-md-3 a col-lg-3 align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+
+                    <img src="img/3.png" alt="">
+
+                    <h4>Lorem Ipsum</h4>
+                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</p>
+
+
+                </div>
+
+                <div class="col-md-3 b col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+
+                    <img src="img/4.png" alt="">
+
+                    <h4>Sed ut perspiciatis</h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
+
+
+                </div>
+                <div class="col-md-3 c col-lg-3 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+
+                    <img src="img/5.png" alt="">
+
+                    <h4>Magni Dolores</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+
+
+                </div>
+                <div class="col-md-3 d col-lg-3 align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+
+                    <img src="img/6.png" alt="">
+
+                    <h4>Nemo Enim</h4>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="Portfolio" class="portfolio mt-5 text-center">
+
+        <div class="container">
+
+            <div class="tital1 mb-5">
+
+                <h2 class="pt-5 pt">Portfolio</h2>
+                <p class="pt-3 pb-4 pb">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
+                    quidem hic quas.</p>
+
+            </div>
+
+            <div class="btn-group pb-5">
+                <button type="button" class="btn btn-dark">ALL</button>
+                <button type="button" href="#app" class="btn btn-dark">APP</button>
+                <button type="button" class="btn btn-dark">CARD</button>
+                <button type="button" class="btn btn-dark">WEB</button>
+            </div>
+
+            <div class="row ">
+
+                <div class=" col-md-4 ">
+                    <div class="kgf">
+
+                        <div class="img " id="app">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <span></span>
+                            <span></span>
+                            <h2>APP 1</h2>
+                            <P>APP</P>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 ">
+                    <div class="kgf">
+
+                        <div class="img2">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <span></span>
+                            <span></span>
+                            <h2>WEB 1</h2>
+                            <P>web</P>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="kgf">
+
+                        <div class="img3">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <span></span>
+                            <span></span>
+                            <h2>APP 2</h2>
+                            <P>APP</P>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row ">
+
+                <div class=" col-md-4 mt-4 ">
+                    <div class="kgf">
+
+                        <div class="img4">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <span></span>
+                            <span></span>
+                            <h2>CARD 2</h2>
+                            <P>card</P>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-4 ">
+                    <div class="kgf">
+
+                        <div class="img5">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <span></span>
+                            <span></span>
+                            <h2>WEB 2</h2>
+                            <P>web</P>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4 ">
+                    <div class="kgf">
+
+                        <div class="img6">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <span></span>
+                            <span></span>
+                            <h2>APP 3</h2>
+                            <P>APP</P>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row ">
+
+                <div class=" col-md-4 mt-4 ">
+                    <div class="kgf">
+
+                        <div class="img7">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <span></span>
+                            <span></span>
+                            <h2>CARD 1</h2>
+                            <P>card</P>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-4 ">
+                    <div class="kgf">
+
+                        <div class="img8">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <span></span>
+                            <span></span>
+                            <h2>CARD 3</h2>
+                            <P>card</P>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4 ">
+
+                    <div class="kgf">
+
+                        <div class="img9">
+                            <div class="overlay1"></div>
+                            <div class="overlay2"></div>
+                            <span></span>
+                            <span></span>
+                            <h2>WEB 3</h2>
+                            <P>web</P>
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <section class="Team" id="Team">
+
+        <div class="container">
+
+            <div class="tital2 mb-5">
+
+                <h2 class="pt-5 pt1">Team</h2>
+                <p class="pt-3 pb-4 pb1">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
+                    quidem hic quas.</p>
+
+            </div>
+
+            <div class="row ">
+
+                <div class=" col-md-3 ">
+                    <div class="img11"></div>
+                </div>
+
+                <div class="col-md-3 ">
+                    <div class="img12"></div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="img13"></div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="img14"></div>
+                </div>
+
+
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>Contact</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
+                    quidem hic quas.</p>
+            </div>
+
+            <div class="row no-gutters justify-content-center" data-aos="fade-up">
+
+                <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="info">
+                        <div class="address">
+                            <i class="fa fa-map-marker"></i>
+                            <h4>Location:</h4>
+                            <p>A108 Adam Street, New York, NY 535022</p>
+                        </div>
+
+                        <div class="email mt-4">
+                            <i class="fa fa-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>info@example.com</p>
+                        </div>
+
+                        <div class="phone mt-4">
+                            <i class="fa fa-phone"></i>
+                            <h4>Call:</h4>
+                            <p>+1 5589 55488 55s</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5 d-flex align-items-stretch">
+                    <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+            <div class="row mt-5 justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <h3>Maxim</h3>
+                    <p class="text1">A108 Adam Street</p>
+                    <p> NY 535022, USA</p>
+
+
+                    <h5>Phone: +1 5589 55488 55</h5>
+                    <h5>Email: info@example.com</h5>
+
+                    <!-- <a class="btn"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="btn"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a class="btn"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="btn"><i class="fa fa-linkedin" aria-hidden="true"></i></a> -->
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h4>Useful Links</h4>
+                    <ul>
+
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#home">home</a>
+                        </li>
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#About us">About us</a>
+                        </li>
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#Services">Services</a>
+                        </li>
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#Terms of service">Terms of service</a>
+                        </li>
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#Privacy policy">Privacy policy</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h4>Our Services</h4>
+                    <ul>
+
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#Web Design">Web Design</a>
+                        </li>
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#Web Development">Web Development</a>
+                        </li>
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#Product Management">Product Management</a>
+                        </li>
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#Marketing">Marketing</a>
+                        </li>
+                        <li>
+                            <i class=" fa fa-chevron-right"></i>
+                            <a href="#Graphic Design">Graphic Design</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+
+                    <h4>Newsletter</h4>
+                    <p>Though not required by the syntax of any language</p>
+
+                    <div class="container newsletter-main">
+
+                        <div class="row">
+
+                            <div class="col-lg-12 col-12">
+
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control news-input" placeholder="Your Email">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Subscribe</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+    </section>
+
+    <section class="footer2" id="">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class=" container  text-center">
+
+                    <p>© Copyright <b>Maxim</b>. All Rights Reserved</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script>
+        AOS.init({
+            delay: 100, // values from 0 to 3000, wite step 50ms
+            duration: 1500, // values from 0 to 3000, wite step 50ms
+        });
+    </script>
+
+
+</body>
+
+</html>
